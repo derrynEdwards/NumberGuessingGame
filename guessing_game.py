@@ -12,6 +12,10 @@ NOTE: If you strongly prefer to work locally on your own computer, you can total
 import random
 
 def get_prompt():
+    """
+    Prompts the user to input a number from 1-20, and validates if the input is proper or not.
+    If the input is not correct, it will prompt the user to try again. Returns the validated number.
+    """
     while True:
         prompt = input("Please enter a number from 1-20: ")
         try:
@@ -25,6 +29,10 @@ def get_prompt():
 
 
 def guess_number(number):
+    """
+    Receives a number and asks the user to try and guess the number. Once guessed,
+    it returns the number of tries it took the user to guess the number.
+    """
     tries = 0
     number = number
 
@@ -44,6 +52,9 @@ def guess_number(number):
 
 
 def generate_number():
+    """
+    Generates a random number between 1 - 20 and returns it.
+    """
     number = int(20 * random.random())
     if number == 0:
         number += 1
